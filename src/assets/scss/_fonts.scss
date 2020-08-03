@@ -1,0 +1,197 @@
+/*Regular*/
+@font-face {
+    font-family: 'bariol';
+    src: url('../fonts/bariol/regular/bariol.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Bold*/
+@font-face {
+    font-family: 'bariol_bold';
+    src: url('../fonts/bariol/bold/bariol_bold.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*Icomoon*/
+@font-face {
+    font-family: 'icomoon';
+    src: url('../fonts/icomoon/icomoon.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+[class^="icone-"], [class*=" icone-"] {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+  
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+  .icone-consorcio:before {
+    content: "\e900";
+  }
+  .icone-poupanca:before {
+    content: "\e903";
+  }
+  .icone-digitar-codigo:before {
+    content: "\e904";
+  }
+  .icone-link:before {
+    content: "\e905";
+  }
+  .icone-back:before {
+    content: "\e906";
+  }
+  .icone-bar-code2:before {
+    content: "\e907";
+  }
+  .icone-bar-code:before {
+    content: "\e908";
+  }
+  .icone-busca:before {
+    content: "\e909";
+  }
+  .icone-calendar:before {
+    content: "\e90a";
+  }
+  .icone-card:before {
+    content: "\e90b";
+  }
+  .icone-chat:before {
+    content: "\e90c";
+  }
+  .icone-check:before {
+    content: "\e90d";
+  }
+  .icone-clips:before {
+    content: "\e90e";
+  }
+  .icone-conta:before {
+    content: "\e90f";
+  }
+  .icone-cracha:before {
+    content: "\e910";
+  }
+  .icone-digital:before {
+    content: "\e911";
+  }
+  .icone-dollar:before {
+    content: "\e912";
+  }
+  .icone-edit:before {
+    content: "\e913";
+  }
+  .icone-emprestimo:before {
+    content: "\e914";
+  }
+  .icone-envelope:before {
+    content: "\e915";
+  }
+  .icone-extrato:before {
+    content: "\e916";
+  }
+  .icone-favorito:before {
+    content: "\e917";
+  }
+  .icone-fechar:before {
+    content: "\e918";
+  }
+  .icone-filtro:before {
+    content: "\e919";
+  }
+  .icone-grafico:before {
+    content: "\e91a";
+  }
+  .icone-grafico-2:before {
+    content: "\e91b";
+  }
+  .icone-info:before {
+    content: "\e91c";
+  }
+  .icone-inicio:before {
+    content: "\e91d";
+  }
+  .icone-lixeira:before {
+    content: "\e91e";
+  }
+  .icone-mais:before {
+    content: "\e91f";
+  }
+  .icone-menu:before {
+    content: "\e920";
+  }
+  .icone-previdencia:before {
+    content: "\e921";
+  }
+  .icone-qrcode:before {
+    content: "\e922";
+  }
+  .icone-saquedigital:before {
+    content: "\e923";
+  }
+  .icone-seta-baixo:before {
+    content: "\e924";
+  }
+  .icone-seta-cima:before {
+    content: "\e925";
+  }
+  .icone-seta-direita:before {
+    content: "\e926";
+  }
+  .icone-seta-esquerda:before {
+    content: "\e927";
+  }
+  .icone-sino:before {
+    content: "\e928";
+  }
+  .icone-telefone:before {
+    content: "\e929";
+  }
+  .icone-transferencia:before {
+    content: "\e92a";
+  }
+  .icone-user:before {
+    content: "\e92b";
+  }
+  .icone-user-pf:before {
+    content: "\e92c";
+  }
+  .icone-user-pj:before {
+    content: "\e92d";
+  }
+  .icone-view-cards:before {
+    content: "\e92e";
+  }
+  .icone-view-list:before {
+    content: "\e92f";
+  }
+  .icone-watch:before {
+    content: "\e930";
+  }
+  .icone-back2:before {
+    content: "\e931";
+  }
+  .icone-DOC:before {
+    content: "\e932";
+  }
+  .icone-TED:before {
+    content: "\e933";
+  }
+  .icone-qrcode2:before {
+    content: "\e934";
+  }
+  .icone-eye:before {
+    content: "\e935";
+  }
+  .icone-eye-off:before {
+    content: "\e936";
+  }
+  

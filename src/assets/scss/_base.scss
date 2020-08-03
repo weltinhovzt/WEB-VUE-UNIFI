@@ -1,0 +1,304 @@
+// main: main.scss
+
+body {
+  /* --- Base Styles --- */
+  font-family: $bariol !important;
+  color: $verdeEscuro;
+
+  p {
+    font-size: 16px;
+  }
+
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+
+  a {
+    text-decoration: none !important;
+    outline: none !important;
+    /*
+    &:focus {
+      color: $verdeClaro !important;
+    }
+    */
+    &.button {
+      cursor: pointer;
+      font-family: $bariol !important;
+    }
+  }
+
+  input {
+    outline: none !important;
+  }
+
+  h1 {
+    font-size: 36px;
+    font-weight: normal;
+  }
+
+  h2 {
+    font-size: 24px;
+    font-weight: normal;
+  }
+
+  h3 {
+    font-size: 18px;
+    font-weight: normal;
+  }
+
+  button {
+    cursor: pointer;
+    font-family: $bariol;
+    font-size: 16px;
+    outline: none !important;
+  }
+
+  .button {
+    text-align: center;
+    background: $cinzaClaro;
+    @extend %box-shadow;
+    border-radius: 3px;
+    color: $verdeEscuro;
+    font-size: 18px;
+    padding: 4px 12px;
+    border: 1px solid $cinzaMedio2;
+
+    &.btnPrimary {
+      background: $turquesa;
+      color: $branco !important;
+      border: 1px solid $turquesa;
+    }
+
+    &.btnSecundary {
+      background: $verdeClaro;
+      color: $branco !important;
+      border: 1px solid $verdeClaro;
+    }
+
+    &.disable {
+      opacity: 0.5;
+      pointer-events: none !important;
+    }
+  }
+
+  .btnIcon {
+    border: 0;
+    box-shadow: none;
+    height: 22px;
+    line-height: 22px;
+    background: none;
+
+    span {
+      width: 20px;
+      height: 20px;
+      line-height: 20px;
+      text-align: center;
+      display: block;
+      float: left;
+      margin-right: 10px;
+      border-radius: 100%;
+      border: 1px solid $verdeClaro;
+      color: $branco;
+      font-size: 8px;
+    }
+  }
+
+  .simpleIcon {
+    font-size: 26px;
+    font-family: $bariol;
+    background: none;
+    border-radius: 0;
+    border: 0;
+    box-shadow: none;
+    color: $verdeEscuro;
+    margin: 0;
+    padding: 0;
+    display: block;
+  }
+
+  .mobView {
+    display: none;
+  }
+
+  .noBorder{
+    border:0 !important;
+  }
+
+  .noPadding{
+    padding:0 !important;
+  }
+
+  .noRadius{
+    border-radius: 0 !important;
+  }
+  /* ========== Loadings =======================================*/
+
+  .loadingData {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background: $branco;
+    opacity: 0;
+    @extend %linear-animation;
+    pointer-events: none;
+
+    img {
+      display: block;
+      border-radius: 100%;
+      position: absolute;
+      width: 40px;
+      height: 40px;
+      top: calc(50% - 20px);
+      left: calc(50% - 20px);
+      @extend %linear-animation;
+
+      &.loading-circle {
+        animation-name: loadCircle;
+        animation-duration: 600ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      &.loading-logo {
+        animation-name: loadLogo;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        animation-delay: 0;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        animation-fill-mode: none;
+        animation-play-state: running;
+      }
+      @keyframes loadCircle {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes loadLogo {
+        0% {
+          transform: scale(.85);
+        }
+
+        100% {
+          transform: scale(1);
+        }
+      }
+    }
+
+    &.active {
+      opacity: 0.98;
+      background: $verdeEscuro;
+      pointer-events: unset;
+      
+      img {
+        width: 70px;
+        height: 70px;
+        top: calc(50% - 35px);
+        left: calc(50% - 35px);
+      }
+    }
+  }
+
+  .loadCard {
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -20px;
+    margin-left: -20px;
+    z-index: 999;
+    border-radius: 100%;
+    background: $branco;
+    @extend %box-shadow;
+    @extend %linear-animation;
+    display: block;
+
+    img {
+      display: block;
+      border-radius: 100%;
+      position: absolute;
+      width: 30px;
+      height: 30px;
+      top: 50%;
+      margin-top: -15px;
+      left: 50%;
+      margin-left: -15px;
+      @extend %linear-animation;
+
+      &.loading-circle {
+        animation-name: loadCircle;
+        animation-duration: 600ms;
+        animation-iteration-count: infinite;
+        animation-timing-function: linear;
+      }
+
+      &.loading-logo {
+        animation-name: loadLogo;
+        animation-duration: 1s;
+        animation-timing-function: ease-out;
+        animation-delay: 0;
+        animation-direction: alternate;
+        animation-iteration-count: infinite;
+        animation-fill-mode: none;
+        animation-play-state: running;
+      }
+      @keyframes loadCircle {
+        from {
+          transform: rotate(0deg);
+        }
+
+        to {
+          transform: rotate(360deg);
+        }
+      }
+      @keyframes loadLogo {
+        0% {
+          transform: scale(.85);
+        }
+
+        100% {
+          transform: scale(1);
+        }
+      }
+    }
+
+    &.active {
+      width: 100%;
+      height: 100%;
+      opacity: 1;
+      left: 0;
+      top: 0;
+      border-radius: 0;
+      margin: 0;
+      background: $branco;
+
+      img {
+        top: 50%;
+        left: 50%;
+        width: 50px;
+        height: 50px;
+        margin-left: -25px;
+        margin-top: -25px;
+      }
+    }
+  }
+}
+
+.no-selectable  {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+   -khtml-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+}

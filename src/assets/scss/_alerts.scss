@@ -1,0 +1,103 @@
+// main: ../main.scss
+/*
+.globalAlert{
+  position: fixed;
+  top:0;
+  left: 0;
+  width: 100%;
+  background: $verdeEscuro;
+  @extend %box-shadow;
+  z-index: 999;
+  h3{
+    text-align: center;
+    color: $branco;
+    font-size: 16px;
+    line-height: 16px;
+    padding: 15px 85px 15px 15px;
+    margin:0;
+    font-family: $bariol;
+  }
+  span{
+    display: block;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    color: $verdeEscuro;
+    background: $branco;
+    padding: 3px 10px;
+    border-radius: 5px;
+  }
+  .danger{
+    background: $vermelho;
+  }
+}
+*/
+
+.alert {
+  padding: 5px 10px;
+  font-size: 16px;
+  line-height: 18px;
+  border-radius: 3px;
+  background: $cinzaClaro;
+  color: $verdeEscuro;
+  margin-bottom: 10px;
+  border: 1px solid $cinzaEscuro;
+  border-top: 3px solid $cinzaEscuro;
+
+  &.alertAttention {
+    border: 1px solid $amarelo;
+    border-top: 3px solid $amarelo;
+  }
+
+  &.alertSuccess {
+    border: 1px solid $verdeClaro;
+    border-top: 3px solid $verdeClaro;
+  }
+
+  &.alertError {
+    border: 1px solid $vermelho;
+    border-top: 3px solid $vermelho;
+  }
+
+  &.alertInfo {
+    border: 1px solid $azul;
+    border-top: 3px solid $azul;
+  }
+}
+
+.inputAlert {
+  display: block;
+  padding-bottom: 5px;
+  text-align: center;
+  font-size: 16px;
+  color: $verdeEscuro;
+  position: relative;
+  margin-bottom: 20px;
+  font-family: $bariolBold;
+
+  &::before {
+    border-style: solid;
+    border-width: 1px 1px 0 0;
+    content: '';
+    position: absolute;
+    display: inline-block;
+    height: 0.40em;
+    left: 4px;
+    transform: rotate(-45deg);
+    color: $amarelo;
+    bottom: 15px;
+    vertical-align: top;
+    background: $cinzaMedio;
+    width: 0.40em;
+  }
+
+  &.alertAttention {
+    border-bottom: 1px solid $amarelo;
+  }
+}
+
+/* -- input required -- */
+.required {
+  border-left: 2px solid #f38f8f;
+}

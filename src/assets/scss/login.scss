@@ -1,0 +1,328 @@
+/* -- imports -- */
+@import "fonts";
+@import "variables";
+@import "extends";
+@import "base";
+@import "refactory";
+@import "steps";
+@import "alerts";
+
+/* -- style -- */
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  position: relative;
+  overflow-x: hidden;
+  background: $cinzaMedio;
+}
+
+.welcome {
+  background: $verdeEscuro;
+  color:$branco;
+  width: 25%;
+  height: 100vh;
+  float: left;
+  position: fixed;
+  text-align: center;
+  padding-top:12%;
+  h1{
+    font-size: 54px;
+    font-weight: normal;
+    p{
+      margin: 10px 0 20px 0;
+      font-size: 22px;
+      span{
+        color: $verdeClaro;
+      }
+    }
+  }
+  button{
+    color: $branco;
+  }
+}
+
+.content {
+  width:50%;
+  height:100vh;
+  overflow: auto;
+  margin-left: 25%;
+  position: relative;
+  display: none;
+  &.visible{
+    display: block;
+  }
+  .summary{
+    display: none;
+    &.visible{
+      display: block;
+    }
+    .summary-title{
+      font-weight: normal;
+    }
+  }
+  .newAccess{
+    display: none;
+    &.visible{
+      display: block;
+      margin-bottom: 50px;
+    }
+    .form-access{
+      padding: 50px;
+      h2{
+        font-size: 36px;
+        margin-bottom: 30px;
+        font-family: $bariolBold;
+      }
+      .formulario-padrao{
+        input{
+          padding: 10px;
+          border-radius: 3px;
+          width: calc(100% - 26px);
+          border: 1px solid $cinzaMedio2;
+          margin: 10px 0;
+          font-size: 16px;
+          font-family: $bariol;
+          background: $cinzaClaro;
+          &:focus{
+            @extend %box-shadow;
+          }
+        }
+        .newPassword{
+           width: 100%;
+           overflow: hidden;
+           padding-bottom: 20px;
+
+           .inputArea{
+             position: relative;
+             input{
+               pointer-events: none;
+               width: calc(100% - 22px);
+             }
+             .eraser{
+               display: none;
+               top: 21px;
+               position: absolute;
+               right: 15px;
+               color: $verdeEscuro;
+               cursor: pointer;
+             }
+           }
+          .numeric-area{
+            width: 300px;
+            margin:20px auto;
+            overflow: hidden;
+            p{
+              margin-bottom: 20px;
+            }
+            a{
+              background: $cinzaClaro;
+              color: $cinzaMedio2;
+              border:1px solid $cinzaMedio2;
+              @extend %box-shadow;
+              width: 38px;
+              height: 38px;
+              line-height: 38px;
+              font-size: 22px;
+              border-radius: 10px;
+              text-align: center;
+              display: inline-block;
+              margin:5px;
+              cursor: pointer !important;
+            }
+          }
+        }
+      }
+    }
+  }
+  .close-summary{
+    position: fixed;
+    top: 30px;
+    right: calc(25% + 30px);
+    font-size:22px;
+    cursor: pointer;
+  }
+}
+
+.float-Keyboard {
+  background: $verdeEscuro url('../img/background.png')no-repeat;
+  background-size: cover;
+  position: fixed;
+  width: 75%;
+  height: 100vh;
+  top: 0;
+  left: 25%;
+  @extend %linear-animation;
+
+  &.expand {
+    left: 75%;
+  }
+
+  .float-logo{
+    width: 100px;
+    height: auto;
+    display: block;
+    position: absolute;
+    top:calc(50% - 30px);
+    left:-42px;
+    &.mobi{
+      display: none;
+    }
+  }
+
+  .keyboard {
+    text-align: center;
+    width: 350px;
+    margin:15% auto 0;
+    color: $branco;
+    @extend %placeholder;
+    h2{
+      margin:20px 0;
+    }
+    input{
+      @extend %kitColors-1;
+      @extend %box-shadow;
+      padding: 10px;
+      border-radius: 5px;
+      width: calc(100% - 22px);
+      margin-bottom: 10px;
+      font-family: $bariol;
+      font-size: 16px;
+      letter-spacing: 3px;
+      &::placeholder{
+        letter-spacing: normal;
+      }
+    }
+    .inputArea{
+      position: relative;
+      .eraser{
+        display: none;
+        top: 12px;
+        position: absolute;
+        right: 15px;
+        color: $branco;
+        cursor: pointer;
+      }
+    }
+    .numeric-area{
+      margin:10px 0 20px 0;
+      float: left;
+      a{
+        @extend %kitColors-1;
+        @extend %box-shadow;
+        width: 38px;
+        height: 38px;
+        line-height: 38px;
+        font-size: 22px;
+        border-radius: 10px;
+        text-align: center;
+        display: inline-block;
+        margin:5px;
+        cursor:pointer;
+      }
+    }
+    .button{
+      width: calc(100% - 26px);
+      float: left;
+      display: block;
+      margin-bottom: 15px;
+      border-radius: 5px;
+    }
+    .btnIcon{
+      color: $branco;
+    }
+    .inputAlert{
+      color: $amarelo;
+      font-family: $bariol;
+      &::before{
+        background: #154C40;
+      }
+    }
+  }
+}
+
+/* =================== Responsive ===================== */
+@media (max-width: 767px) {
+  body{
+    background: $verdeEscuro;
+  }
+
+  .welcome{
+    width: 100% !important;
+    height: 80px !important;
+    margin-top: 465px;
+    line-height: 25px;
+    position: relative !important;
+    padding-top: 0 !important;
+    h1{
+      font-size: 32px;
+      margin-top: 55px;
+      >span{
+        display: none;
+      }
+      p{
+        margin: 5px 0;
+      }
+    }
+  }
+
+  .content {
+    width: 100% !important;
+    overflow: auto;
+    margin-left:0 !important;
+    position: absolute !important;
+    background: $cinzaClaro;
+    z-index: 999;
+    .close-summary{
+      right: 30px !important;
+    }
+}
+
+  .float-Keyboard {
+    position: relative !important;
+    width: 100% !important;
+    height: 436px;
+    margin-top: -510px;
+    left: 0 !important;
+    float: left !important;
+    .float-logo{
+      display: none;
+      &.mobi{
+        display: block;
+        top: -21px !important;
+        left: 50% !important;
+        width: 50px !important;
+        margin-left: -25px !important;
+      }
+    }
+    .keyboard {
+      margin:20px auto 0;
+      width: calc(100% - 40px);
+      padding:0 20px;
+      input{
+        padding:15px 10px;
+      }
+      .numeric-area{
+        width: 100%;
+        a{
+          width: calc(20% - 12px);
+          height: 52px;
+          line-height: 53px;
+        }
+      }
+      .button{
+        height: 35px;
+        line-height: 35px;
+      }
+      .eraser{
+        top:17px !important;
+        cursor: pointer !important;
+      }
+    }
+  }
+
+
+}

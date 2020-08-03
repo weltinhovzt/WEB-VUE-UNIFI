@@ -1,0 +1,45 @@
+// main: main.scss
+%linear-animation {
+  -webkit-transition: all 0.2s linear;
+  -moz-transition: all 0.2s linear;
+  -ms-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
+  transition: all 0.2s linear;
+}
+%linear-animation-long {
+  -webkit-transition: all 0.4s linear;
+  -moz-transition: all 0.4s linear;
+  -ms-transition: all 0.4s linear;
+  -o-transition: all 0.4s linear;
+  transition: all 0.4s linear;
+}
+%kitColors-1 {
+  background: $verdeEscuro;
+  border:1px solid $verdeClaro;
+  color: $branco;
+}
+%box-shadow {
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.2);
+}
+%box-shadow-inverted {
+  box-shadow: 0 -5px 0 rgba(0, 0, 0, 0.2);
+}
+%box-shadow2 {
+  box-shadow: 0 25px 35px rgba(0, 0, 0, 0.5);
+}
+%box-shadow3 {
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+
+}
+%placeholder {
+  ::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: $branco;
+    opacity: 1; /* Firefox */
+  }
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+      color: $branco;
+  }
+  ::-ms-input-placeholder { /* Microsoft Edge */
+      color: $branco;
+  }
+}

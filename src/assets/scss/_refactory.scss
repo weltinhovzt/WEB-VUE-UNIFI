@@ -1,0 +1,99 @@
+// main: main.scss
+/* -- Styeles Refactory -- */
+.tooltip {
+  opacity: inherit !important;
+}
+
+.tooltip-inner {
+  max-width: 200px;
+  padding: 3px 8px;
+  color: $branco;
+  text-align: center;
+  background-color: $verdeClaro;
+  border-radius: 0.25rem;
+}
+
+.tooltip.bs-tooltip-auto[x-placement^=right] .arrow::before,
+.tooltip.bs-tooltip-right .arrow::before {
+  content: "";
+  border-width: 5px 5px 5px 0;
+  border-right-color: $verdeClaro;
+}
+
+.input-group {
+  .button {
+    box-shadow: none;
+  }
+}
+
+.form-control {
+  &:focus {
+    color: $verdeEscuro;
+    border-color: $verdeEscuro;
+    box-shadow: 0 0 0 0.2rem rgba(0,54,65,.25);
+    outline: 0;
+  }
+}
+/* -- tables -- */
+.table-striped tbody tr:nth-of-type(odd){
+  background-color: $cinzaClaro !important;
+}
+.table{
+  td{
+    padding: 10px !important;
+  }
+}
+.nav-link{
+  cursor: pointer !important;
+}
+.modal-lg{
+  &.max{
+    max-width:100% !important;
+    left: 7px !important;
+  }
+}
+.input-form-control{
+  height: 38px !important;
+  border-radius:0 !important;
+}
+
+.card-accordions{
+  .card-header{
+    border:1px solid $cinzaEscuro;
+    .col{
+      line-height: 35px;
+    }
+  }
+}
+
+select{
+  &.form-control{
+    height: 38px !important;
+  }
+}
+
+.card{
+  .ui-buttonset{
+    border-bottom: 1px solid $cinzaEscuro !important;
+    border-radius: 0;
+    padding: 0 !important;
+    margin:15px 0;
+    .ui-button{
+      bottom: -1px;
+      z-index: 9;
+      color: $preto;
+      border: none !important;
+      border-radius: 5px 5px 0 0 !important;
+      span{
+        font-weight: normal !important;
+      }
+      &.ui-state-active{
+        border: 1px solid $cinzaEscuro !important;
+        border-bottom: 1px solid $branco !important;
+        span{
+          font-weight: bold !important;
+        }
+      }
+    }
+  }
+}
